@@ -1,4 +1,4 @@
-library flutter_slidable;
+library flutter_slidable2;
 
 export 'src/action_pane_motions.dart';
 export 'src/actions.dart';
