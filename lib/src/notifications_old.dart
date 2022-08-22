@@ -37,7 +37,7 @@ class SlidableNotification {
   /// The notification will be delivered to the closest
   /// [SlidableNotificationListener] widget.
   /// If the [BuildContext] is null, the notification is not dispatched.
-  void dispatch(BuildContext context, SlidableController controller) {
+  void dispatch(BuildContext context, CustomSlidableController controller) {
     final scope = context
         .getElementForInheritedWidgetOfExactType<
             _SlidableNotificationListenerScope>()
@@ -74,7 +74,7 @@ class SlidableRatioNotification extends SlidableNotification {
     required this.ratio,
   }) : super(tag: tag);
 
-  /// The ratio value of the [SlidableController].
+  /// The ratio value of the [CustomSlidableController].
   final double ratio;
 
   @override
@@ -130,11 +130,11 @@ class SlidableNotificationListener extends StatefulWidget {
 
 class _SlidableNotificationListenerState
     extends State<SlidableNotificationListener> {
-  final Map<Object?, SlidableController> openControllers =
-      <Object?, SlidableController>{};
+  final Map<Object?, CustomSlidableController> openControllers =
+      <Object?, CustomSlidableController>{};
 
   void acceptNotification(
-    SlidableController controller,
+    CustomSlidableController controller,
     SlidableNotification notification,
   ) {
     handleNotification(controller, notification);
@@ -142,7 +142,7 @@ class _SlidableNotificationListenerState
   }
 
   void handleNotification(
-    SlidableController controller,
+    CustomSlidableController controller,
     SlidableNotification notification,
   ) {
     if (widget.autoClose && !controller.closing) {
@@ -155,7 +155,7 @@ class _SlidableNotificationListenerState
     }
   }
 
-  void clearController(SlidableController controller, Object? tag) {
+  void clearController(CustomSlidableController controller, Object? tag) {
     final lastOpenController = openControllers[tag];
     if (lastOpenController == controller) {
       openControllers.remove(tag);
@@ -199,7 +199,7 @@ class SlidableNotificationSender extends StatefulWidget {
   }) : super(key: key);
 
   final Object? tag;
-  final SlidableController controller;
+  final CustomSlidableController controller;
   final Widget child;
 
   @override

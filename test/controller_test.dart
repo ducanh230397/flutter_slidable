@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 void main() {
   group('SlidableController', () {
     test('Manually changing ratio, changes action pane type', () async {
-      final controller = SlidableController(const TestVSync());
+      final controller = CustomSlidableController(const TestVSync());
       final actionTypeLogs = <ActionPaneType>[];
       final actionPaneType = controller.actionPaneType;
       actionPaneType.addListener(() {
@@ -24,7 +24,7 @@ void main() {
     testWidgets('Acting on the animation, changes action pane type',
         (tester) async {
       TestWidgetsFlutterBinding.ensureInitialized();
-      final controller = SlidableController(const TestVSync());
+      final controller = CustomSlidableController(const TestVSync());
       final actionTypeLogs = <ActionPaneType>[];
       final actionPaneType = controller.actionPaneType;
       actionPaneType.addListener(() {

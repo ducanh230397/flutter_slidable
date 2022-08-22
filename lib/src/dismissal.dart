@@ -17,7 +17,7 @@ class SlidableDismissal extends StatefulWidget {
 
   final Axis axis;
   final Widget child;
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   @override
   _SlidableDismissalState createState() => _SlidableDismissalState();

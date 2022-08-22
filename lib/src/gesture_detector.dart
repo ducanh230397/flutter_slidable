@@ -16,7 +16,7 @@ class SlidableGestureDetector extends StatefulWidget {
     this.dragStartBehavior = DragStartBehavior.start,
   }) : super(key: key);
 
-  final SlidableController controller;
+  final CustomSlidableController controller;
   final Widget child;
   final Axis direction;
   final bool enabled;

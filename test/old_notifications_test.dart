@@ -11,7 +11,7 @@ void main() {
         await tester.pumpWidget(
           SlidableNotificationSender(
             tag: null,
-            controller: SlidableController(const TestVSync()),
+            controller: CustomSlidableController(const TestVSync()),
             child: const SizedBox(),
           ),
         );
@@ -28,7 +28,7 @@ void main() {
           notifications.add(notification);
         }
 
-        final controller = SlidableController(const TestVSync());
+        final controller = CustomSlidableController(const TestVSync());
 
         await tester.pumpWidget(
           SlidableNotificationListener(
@@ -69,7 +69,7 @@ void main() {
           notifications.add(notification);
         }
 
-        final controller = SlidableController(const TestVSync());
+        final controller = CustomSlidableController(const TestVSync());
 
         await tester.pumpWidget(
           SlidableNotificationListener(
@@ -168,7 +168,7 @@ void main() {
     testWidgets('can automatically close controllers', (tester) async {
       final controllers = List.generate(
         4,
-        (index) => SlidableController(const TestVSync()),
+        (index) => CustomSlidableController(const TestVSync()),
       );
 
       await tester.pumpWidget(
@@ -212,7 +212,7 @@ void main() {
         (tester) async {
       final controllers = List.generate(
         4,
-        (index) => SlidableController(const TestVSync()),
+        (index) => CustomSlidableController(const TestVSync()),
       );
 
       await tester.pumpWidget(
@@ -248,7 +248,7 @@ void main() {
     testWidgets('can have more than one group', (tester) async {
       final controllers = List.generate(
         4,
-        (index) => SlidableController(const TestVSync()),
+        (index) => CustomSlidableController(const TestVSync()),
       );
 
       await tester.pumpWidget(
@@ -283,7 +283,7 @@ void main() {
     testWidgets('prevent to reopen a closing slidable', (tester) async {
       final controllers = List.generate(
         4,
-        (index) => SlidableController(const TestVSync()),
+        (index) => CustomSlidableController(const TestVSync()),
       );
 
       await tester.pumpWidget(

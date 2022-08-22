@@ -5,7 +5,7 @@ export 'src/actions.dart';
 export 'src/auto_close_behavior.dart'
     show SlidableAutoCloseBehavior, SlidableAutoCloseNotification;
 export 'src/controller.dart'
-    show ResizeRequest, SlidableController, ActionPaneType;
+    show ResizeRequest, CustomSlidableController, ActionPaneType;
 export 'src/dismissible_pane.dart';
 export 'src/dismissible_pane_motions.dart';
 export 'src/notifications.dart';

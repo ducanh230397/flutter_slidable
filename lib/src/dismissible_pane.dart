@@ -81,7 +81,7 @@ class DismissiblePane extends StatefulWidget {
 }
 
 class _DismissiblePaneState extends State<DismissiblePane> {
-  SlidableController? controller;
+  CustomSlidableController? controller;
 
   @override
   void initState() {

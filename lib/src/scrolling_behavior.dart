@@ -13,7 +13,7 @@ class SlidableScrollingBehavior extends StatefulWidget {
     required this.child,
   }) : super(key: key);
 
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// Specifies to close the closest [Slidable] after the closest [Scrollable]'s
   /// position changed.

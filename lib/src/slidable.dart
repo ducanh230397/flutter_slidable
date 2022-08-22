@@ -104,7 +104,7 @@ class Slidable extends StatefulWidget {
   @override
   _SlidableState createState() => _SlidableState();
 
-  /// The closest instance of the [SlidableController] which controls this
+  /// The closest instance of the [CustomSlidableController] which controls this
   /// [Slidable] that encloses the given context.
   ///
   /// {@tool snippet}
@@ -114,7 +114,7 @@ class Slidable extends StatefulWidget {
   /// SlidableController controller = Slidable.of(context);
   /// ```
   /// {@end-tool}
-  static SlidableController? of(BuildContext context) {
+  static CustomSlidableController? of(BuildContext context) {
     final scope = context
         .getElementForInheritedWidgetOfExactType<_SlidableControllerScope>()
         ?.widget as _SlidableControllerScope?;
@@ -124,7 +124,7 @@ class Slidable extends StatefulWidget {
 
 class _SlidableState extends State<Slidable>
     with TickerProviderStateMixin, AutomaticKeepAliveClientMixin {
-  late final SlidableController controller;
+  late final CustomSlidableController controller;
   late Animation<Offset> moveAnimation;
   late bool keepPanesOrder;
 
@@ -134,7 +134,7 @@ class _SlidableState extends State<Slidable>
   @override
   void initState() {
     super.initState();
-    controller = SlidableController(this)
+    controller = CustomSlidableController(this)
       ..actionPaneType.addListener(handleActionPanelTypeChanged);
   }
 
@@ -291,7 +291,7 @@ class _SlidableControllerScope extends InheritedWidget {
     required Widget child,
   }) : super(key: key, child: child);
 
-  final SlidableController? controller;
+  final CustomSlidableController? controller;
 
   @override
   bool updateShouldNotify(_SlidableControllerScope old) {
@@ -306,7 +306,7 @@ class _SlidableClipper extends CustomClipper<Rect> {
   }) : super(reclip: controller.animation);
 
   final Axis axis;
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   @override
   Rect getClip(Size size) {

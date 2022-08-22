@@ -10,7 +10,7 @@ import 'common.dart';
 void main() {
   group('SlidableDismissal', () {
     testWidgets('has 0 height when horizontal and dismissed', (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(
         Directionality(
@@ -39,7 +39,7 @@ void main() {
     });
 
     testWidgets('has 0 width when vertical and dismissed', (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(
         Directionality(
@@ -69,7 +69,7 @@ void main() {
 
     testWidgets('throws a FlutterError 0 if rebuilt after dissmissed',
         (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(
         Directionality(
@@ -117,8 +117,8 @@ void main() {
     });
 
     testWidgets('listeners are correctly removed when updated', (tester) async {
-      final slidableController1 = SlidableController(const TestVSync());
-      final slidableController2 = SlidableController(const TestVSync());
+      final slidableController1 = CustomSlidableController(const TestVSync());
+      final slidableController2 = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(
         Directionality(

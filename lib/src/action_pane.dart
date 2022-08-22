@@ -109,7 +109,7 @@ class ActionPane extends StatefulWidget {
 }
 
 class _ActionPaneState extends State<ActionPane> implements RatioConfigurator {
-  SlidableController? controller;
+  CustomSlidableController? controller;
   late double openThreshold;
   late double closeThreshold;
   bool showMotion = true;

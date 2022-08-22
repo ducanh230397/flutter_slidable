@@ -17,7 +17,7 @@ void main() {
 
   group('SlidableGestureDetector -', () {
     testWidgets('can slide horizontally', (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(Center(
         child: SizedBox(
@@ -45,7 +45,7 @@ void main() {
     });
 
     testWidgets('can slide vertically', (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(Center(
         child: SizedBox(
@@ -73,7 +73,7 @@ void main() {
     });
 
     testWidgets('cannot slide horizontally if asked', (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(Center(
         child: SizedBox(
@@ -102,7 +102,7 @@ void main() {
     });
 
     testWidgets('cannot slide vertically if asked', (tester) async {
-      final slidableController = SlidableController(const TestVSync());
+      final slidableController = CustomSlidableController(const TestVSync());
 
       await tester.pumpWidget(Center(
         child: SizedBox(

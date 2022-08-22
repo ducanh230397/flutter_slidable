@@ -97,9 +97,9 @@ class StillGesture extends EndGesture {
 }
 
 /// Represents a way to control a slidable from outside.
-class SlidableController {
-  /// Creates a [SlidableController].
-  SlidableController(TickerProvider vsync)
+class CustomSlidableController {
+  /// Creates a [CustomSlidableController].
+  CustomSlidableController(TickerProvider vsync)
       : _animationController = AnimationController(vsync: vsync),
         endGesture = ValueNotifier(null),
         _dismissGesture = _ValueNotifier(null),

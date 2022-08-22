@@ -108,7 +108,7 @@ class SlidablePlayer extends StatefulWidget {
 }
 
 class _SlidablePlayerState extends State<SlidablePlayer> {
-  final Set<SlidableController?> controllers = <SlidableController?>{};
+  final Set<CustomSlidableController?> controllers = <CustomSlidableController?>{};
 
   @override
   void initState() {
@@ -149,7 +149,7 @@ class SlidableControllerSender extends StatefulWidget {
 }
 
 class _SlidableControllerSenderState extends State<SlidableControllerSender> {
-  SlidableController? controller;
+  CustomSlidableController? controller;
   _SlidablePlayerState? playerState;
 
   @override

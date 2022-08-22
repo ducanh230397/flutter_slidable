@@ -319,7 +319,7 @@ void main() {
       }
 
       const startActionPaneKey = ValueKey('start');
-      SlidableController? controller;
+      CustomSlidableController? controller;
 
       await tester.pumpWidget(
         Directionality(

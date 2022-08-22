@@ -101,7 +101,7 @@ class SlidableAutoCloseBehaviorInteractor extends StatelessWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -138,9 +138,9 @@ class SlidableAutoCloseNotification {
   final Object? groupTag;
 
   /// {@template slidable.controller}
-  /// The [SlidableController] associated.
+  /// The [CustomSlidableController] associated.
   /// {@endtemplate}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// Whether the [Slidable] where this notification was sent should also close.
   final bool closeSelf;
@@ -160,7 +160,7 @@ class SlidableAutoCloseInteractor extends StatelessWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -195,7 +195,7 @@ class SlidableAutoCloseBehaviorListener extends StatelessWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -231,7 +231,7 @@ class SlidableAutoCloseNotificationSender extends StatelessWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -279,9 +279,9 @@ class SlidableAutoCloseBarrierNotification {
   final Object? groupTag;
 
   /// {@template slidable.controller}
-  /// The [SlidableController] associated.
+  /// The [CustomSlidableController] associated.
   /// {@endtemplate}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// Whether the barrier is enabled.
   final bool enabled;
@@ -301,7 +301,7 @@ class SlidableAutoCloseBarrierInteractor extends StatelessWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -336,7 +336,7 @@ class SlidableAutoCloseBarrierNotificationSender extends StatefulWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -427,7 +427,7 @@ class SlidableAutoCloseBarrierBehaviorListener extends StatefulWidget {
   final Object? groupTag;
 
   /// {@macro slidable.controller}
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   /// The widget below this widget in the tree.
   ///
@@ -491,7 +491,7 @@ class _SlidableNotificationSender extends StatefulWidget {
     required this.child,
   }) : super(key: key);
 
-  final SlidableController controller;
+  final CustomSlidableController controller;
 
   final AnimationStatusListener onStatusChanged;
 
